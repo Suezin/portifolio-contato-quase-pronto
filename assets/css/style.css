@@ -1,0 +1,314 @@
+:root {
+    --bg-color : #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #00ffee;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 3em ;
+    background: rgb(0,0,0, 0.3); 
+    backdrop-filter: blur(10px);  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+.logo {
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 800;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.logo span {
+    text-shadow: 0 0 25px var(--main-color);
+}
+.navegacao a{
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-left: rem;
+    margin-right: 5rem;
+    font-weight: 400;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    text-decoration: none   ;
+}
+.ativo {
+    border-bottom: 3px solid var(--main-color);
+}
+.navegacao a:hover,
+.navegacao a.ativo{
+    color : var(--main-color);  
+    border-bottom: 3px solid var(--main-color);
+}
+#menu-icon {
+    font-size: 2.8;
+    color: var(--main-color);
+    display: none;
+}
+section{
+    min-height: 100mvh;
+    padding: 10rem 12% 10rem;
+
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-content: center ;
+    gap:10rem;
+}
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+}
+span {
+    color: var(--main-color);  
+}
+.logo span{
+    color: var(--main-color);
+}
+.home-content h3{
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+
+}
+.home-content h1{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1.3rem;
+    line-height: 1;
+
+}
+.home-photo {
+    border-radius: 50%;
+
+} 
+.home-photo img{
+    border-radius: 50%;
+    position: relative;
+    top: 2rem;
+    height: 26vw;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.home-photo img:hover {
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 40px var(--main-color),
+                0 0 80px var(--main-color);
+}
+.home-content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-height: 1000px;
+}
+.icones-sociais a{
+    display: inline-flex;
+    justify-content: center ;
+    align-content: center ;
+    width: 2rem;
+    height: 2rem ;
+    background: transparent ;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 1rem 0.5rem 1rem 0;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+.icones-sociais a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+}
+
+.text-animation{
+    font-size: 34 px;
+    font-weight: 600;
+    min-width: 240px;
+}
+.text-animation span {
+    position: relative;
+}
+.text-animation span::before{
+    content: "Dev Fullstack";
+    color: var(--main-color);
+    animation: words 10s infinite;
+}
+.Habilidades {
+    background: var(--bg-color) ;
+    color: black;
+}
+.Habilidades h2{
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+}
+.habilidades-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.habilidade-caixa {
+    background-color: var(--main-color);
+    height: 250px;
+    border-radius: 2rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.habilidade-caixa:hover {
+    background: white;
+    color: black;
+    transform: scale(1.02);
+}
+.habilidade-caixa .info-habilidade{
+    display: flex ;
+    flex-direction: column;
+    text-align: left;
+    max-height: 150px;
+    justify-content: left;
+    align-items: baseline;
+    padding: 3rem 3rem ;
+}
+.info-habilidade h4{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 2;
+}
+.info-habilidade p{
+    font-size: 1rem;
+    font-weight: 600;
+    max-height: 100px;
+    line-height: 1.4;
+    margin: auto;
+}
+
+.projetos {
+    background: var(--bg-color) ;
+    color: black;
+}
+.projetos h2{
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+}
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.projeto-caixa {
+    background-color: var(--main-color);
+    height: 600px;
+    border-radius: 2rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.projeto-caixa:hover {
+    background: white;
+    color: black;
+    transform: scale(1.02);
+}
+
+.projeto-caixa img {
+    transition: 0.9s ease-in-out;
+}
+.projeto-caixa:hover img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(0, 0, 0, 0.1);
+}
+.projeto-caixa:hover a {
+   color: rgba(0, 0, 0);
+}
+
+.projeto-caixa .projeto-info{
+    display: flex ;
+    flex-direction: column;
+    text-align: left;
+    max-height: 150px;
+    justify-content: left;
+    align-items: baseline;
+    padding: 3rem 3rem ;
+}
+.projeto-info h4{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 2;
+}
+.projeto-info p{
+    font-size: 1rem;
+    font-weight: 600;
+    max-height: 100px;
+    line-height: 1.4;
+    margin: auto;
+}
+
+.icon-html{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+
+.icon-java{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    transition: 0.6s ease-in-out;
+}
+
+.icon-java img {
+    height:10rem;
+    width: 10rem;
+    border-radius: 1rem;
+}
+.icon-html img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 1rem;
+}
+.projeto-info a {
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--text-color);
+    transition: 0.6s ease-in-out;
+}
+
